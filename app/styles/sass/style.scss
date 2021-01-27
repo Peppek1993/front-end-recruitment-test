@@ -1,0 +1,145 @@
+// Variables & Mixins
+
+$boxShadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+
+// Form container & input children
+
+.entireForm {
+  display: flex;
+  justify-content: center;
+  background-color: rgb(229, 231, 235);
+  form {
+    padding: 1rem;
+    h3 {
+      font-weight: 700;
+    }
+  }
+}
+
+.bigInput {
+  background-color: white;
+  box-shadow: $boxShadow;
+  padding: 0.5rem;
+  border-radius: 0.25rem;
+  margin-bottom: 1rem;
+  width: 100%;
+  label {
+    font-weight: 700;
+  }
+  input {
+    display: block;
+    width:90%;
+    border-radius: 0.25rem;
+    &:focus{
+      outline: none;
+    }
+  }
+}
+
+.smallInput {
+  background-color: white;
+  box-shadow: $boxShadow;
+  padding: 0.5rem;
+  border-radius: 0.25rem;
+  width: 50%;
+  margin-bottom: 1rem;
+  &:nth-child(even) {
+    margin-left:1rem;
+  }
+  label {
+    font-weight: 700;
+  }
+  input, select {
+    display: block;
+    border-radius: 0.25rem;
+    width: 100%;
+    &:focus{
+      outline: none;
+    }
+  }
+}
+
+.smallInputContainer {
+  display: flex;
+  justify-content: space-between;
+}
+
+// Complete purchase button
+
+.button {
+  width: 100%;
+  margin-top: 2rem;
+  height: 4rem;
+  border-radius: 0.25rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgb(52, 211, 153);
+  color: white;
+  box-shadow: $boxShadow;
+
+  p {
+    padding-left: 0.5rem;
+  }
+}
+
+// Order details window
+
+.order {
+  width: 20%;
+  background-color: white;
+  align-self: flex-start;
+  margin-top: 3.75rem;
+  padding: 0.25rem;
+  border-radius: 0.25rem;
+  h3 {
+    font-weight: 700;
+  }
+  .section {
+    border: 1px dashed rgb(209, 213, 219);
+    border-radius: 0.25rem;
+    padding: 0.75rem;
+    .orderSection {
+      border-bottom: 1px dashed rgb(209, 213, 219);
+      padding-bottom: 0.25rem;
+      .orderRow {
+        display: flex;
+        justify-content: space-between;
+        padding-top: 0.25rem;
+        padding-bottom: 0.25rem;
+      }
+    } 
+    .total {
+      display: flex;
+      justify-content: space-between;
+      padding-top: 0.5rem;
+      padding-bottom: 2.5rem;
+      p {
+        font-size: 0.9rem;
+        font-weight: 700;
+      }
+      .totalAmount {
+        font-size: 1.5rem;
+        font-weight: 800;
+      }
+    }
+  }
+}
+
+
+// Flex variations
+
+.flexStart {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  h3 {
+    padding-right: 0.5rem;
+  }
+}
+
+.flexBetween {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}

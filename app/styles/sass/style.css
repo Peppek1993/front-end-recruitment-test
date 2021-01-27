@@ -1,0 +1,188 @@
+.entireForm {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  background-color: #e5e7eb;
+}
+
+.entireForm form {
+  padding: 1rem;
+}
+
+.entireForm form h3 {
+  font-weight: 700;
+}
+
+.bigInput {
+  background-color: white;
+  -webkit-box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+          box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  padding: 0.5rem;
+  border-radius: 0.25rem;
+  margin-bottom: 1rem;
+  width: 100%;
+}
+
+.bigInput label {
+  font-weight: 700;
+}
+
+.bigInput input {
+  display: block;
+  width: 90%;
+  border-radius: 0.25rem;
+}
+
+.bigInput input:focus {
+  outline: none;
+}
+
+.smallInput {
+  background-color: white;
+  -webkit-box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+          box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  padding: 0.5rem;
+  border-radius: 0.25rem;
+  width: 50%;
+  margin-bottom: 1rem;
+}
+
+.smallInput:nth-child(even) {
+  margin-left: 1rem;
+}
+
+.smallInput label {
+  font-weight: 700;
+}
+
+.smallInput input, .smallInput select {
+  display: block;
+  border-radius: 0.25rem;
+  width: 100%;
+}
+
+.smallInput input:focus, .smallInput select:focus {
+  outline: none;
+}
+
+.smallInputContainer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.button {
+  width: 100%;
+  margin-top: 2rem;
+  height: 4rem;
+  border-radius: 0.25rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  background-color: #34d399;
+  color: white;
+  -webkit-box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+          box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+}
+
+.button p {
+  padding-left: 0.5rem;
+}
+
+.order {
+  width: 20%;
+  background-color: white;
+  -ms-flex-item-align: start;
+      align-self: flex-start;
+  margin-top: 3.75rem;
+  padding: 0.25rem;
+  border-radius: 0.25rem;
+}
+
+.order h3 {
+  font-weight: 700;
+}
+
+.order .section {
+  border: 1px dashed #d1d5db;
+  border-radius: 0.25rem;
+  padding: 0.75rem;
+}
+
+.order .section .orderSection {
+  border-bottom: 1px dashed #d1d5db;
+  padding-bottom: 0.25rem;
+}
+
+.order .section .orderSection .orderRow {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding-top: 0.25rem;
+  padding-bottom: 0.25rem;
+}
+
+.order .section .total {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding-top: 0.5rem;
+  padding-bottom: 2.5rem;
+}
+
+.order .section .total p {
+  font-size: 0.9rem;
+  font-weight: 700;
+}
+
+.order .section .total .totalAmount {
+  font-size: 1.5rem;
+  font-weight: 800;
+}
+
+.flexStart {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.flexStart h3 {
+  padding-right: 0.5rem;
+}
+
+.flexBetween {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+/*# sourceMappingURL=style.css.map */
