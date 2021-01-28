@@ -16,6 +16,7 @@
  *  limitations under the License
  *
  */
+
 /* eslint-env browser */
 (function () {
   "use strict";
@@ -90,3 +91,80 @@ let moreBacon = () => {
   baconImage.style.height = "100%";
   document.getElementById("baconContainer").appendChild(baconImage);
 };
+
+// Form Validation - task 3
+const form = document.getElementById("form");
+const firstName = document.getElementById("firstName");
+const lastName = document.getElementById("lastName");
+const email = document.getElementById("email");
+const postalCode = document.getElementById("postalCode");
+const phoneNumber = document.getElementById("phoneNumber");
+const creditCardNumber = document.getElementById("creditCardNumber");
+const securityCode = document.getElementById("securityCode");
+const expirationDate = document.getElementById("expirationDate");
+
+form.addEventListener("submit", (e) => {
+  let messages = [];
+  if (firstName.value === "" || firstName.value === null) {
+    messages.push("First name is required");
+  }
+  if (lastName.value === "" || lastName.value === null) {
+    messages.push("Last name is required");
+  }
+  if (validateEmail(email.value) === false) {
+    messages.push("Please enter a valid email address");
+  }
+  if (postalCode.value.length !== 5 || isNaN(postalCode.value)) {
+    messages.push("Please enter a valid postal code");
+  }
+  if (validatePhoneNumber(phoneNumber.value) === false) {
+    messages.push("Please enter a valid phone number");
+  }
+  if (validateCreditCard(creditCardNumber.value) === false) {
+    messages.push("Please enter a valid credit card number");
+  }
+  if (securityCode.value.length !== 3 || isNaN(securityCode.value)) {
+    messages.push("Please enter a valid security code");
+  }
+  if (validateExpirationDate(expirationDate.value) === false) {
+    messages.push("Please enter a valid expiration date");
+  }
+  if (messages.length > 0) {
+    e.preventDefault();
+    if (document.getElementsByClassName("error").length == 0) {
+      let error = document.createElement("div");
+      error.classList = "error submitMessage";
+      error.innerText = messages[0];
+      form.appendChild(error);
+    } else {
+      document.getElementsByClassName("error")[0].innerText = messages[0];
+    }
+  } else {
+    e.preventDefault();
+    let success = document.createElement("div");
+    success.classList = "success submitMessage";
+    success.innerText = "Success!";
+    form.appendChild(success);
+    document.getElementsByClassName("error")[0].remove();
+  }
+});
+
+function validateEmail(mail) {
+  return /[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?/.test(
+    mail
+  );
+}
+
+function validatePhoneNumber(number) {
+  return /^\(?([0-9]{3})\)?[-]?([0-9]{3})[-]?([0-9]{3})$/.test(number);
+}
+
+function validateCreditCard(number) {
+  return /^\(?([0-9]{4})\)?[-]?([0-9]{4})[-]?([0-9]{4})[-]?([0-9]{4})$/.test(
+    number
+  );
+}
+
+function validateExpirationDate(number) {
+  return /^(?:0?[1-9]|1[0-2]) *\/ *[1-9][0-9]$/.test(number);
+}
